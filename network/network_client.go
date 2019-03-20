@@ -100,7 +100,7 @@ func main() {
 				}
 			}()
 
-			session, err := client.Connect("localhost:8280")
+			session, err := client.Connect(*host)
 			if err != nil {
 				panic(err)
 			}

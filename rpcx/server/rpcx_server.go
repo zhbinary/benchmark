@@ -10,13 +10,18 @@ import (
 	"runtime"
 	"time"
 
+	"github.com/rpcx-ecosystem/rpcx-benchmark/proto"
 	rlog "github.com/smallnest/rpcx/log"
 	"github.com/smallnest/rpcx/server"
 )
 
 type Hello int
 
+<<<<<<< HEAD:rpcx/server/rpcx_server.go
 func (t *Hello) Say(ctx context.Context, args *model.BenchmarkMessage, reply *model.BenchmarkMessage) error {
+=======
+func (t *Hello) Say(ctx context.Context, args *proto.BenchmarkMessage, reply *proto.BenchmarkMessage) error {
+>>>>>>> a5495c11e080098843350c122477eb6210d765a4:rpcx/rpcx_server.go
 	args.Field1 = "OK"
 	args.Field2 = 100
 	*reply = *args
